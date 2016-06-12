@@ -1,11 +1,14 @@
 package com.torch.app1.torchappproject;
 
+import android.support.annotation.StringDef;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Toast;
 
-public class MainActivity extends ActionBarActivity {
+public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -13,6 +16,9 @@ public class MainActivity extends ActionBarActivity {
 
 
         setContentView(R.layout.activity_main);
+
+        String message= getString(R.string.hello_world);
+        Toast.makeText(MainActivity.this, message, Toast.LENGTH_SHORT).show();
     }
 
 
